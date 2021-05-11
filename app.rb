@@ -24,5 +24,6 @@ get '/recipe' do
 end
 
 get '/cat' do
+  @name = ["Adam", "Emily", "Matt"].sample
   erb(:index) # can be named anything
 end
