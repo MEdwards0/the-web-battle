@@ -1,6 +1,32 @@
-<h1>My name is <%= @name %></h1>
+<% if @name%>
+  <%if @name == '' %>
+  <% else %>
+    <h1>My name is <%= @name %></h1>
+  <% end %>
+
+<% end %>
 
 <h1>Cats are cool</h1>
+
+<form action="/named-cat">
+  <label>Set New Name:</label>
+  <input type="text" name="name">
+  <br>
+  <label>Set Border Colour:</label>
+  <label for='red'>Red</label>
+  <input id='red' type='radio' name='colour' value='red'>
+  <label for='blue'>Blue</label>
+  <input id='blue' type='radio' name='colour' value='blue'>
+  <label for='green'>Green</label>
+  <input id='green' type='radio' name='colour' value='green'>
+  <br>
+  <label>Cute:</label>
+  <label for='false'>false:</label>
+  <input id='false' type='checkbox' name='cute' value='false'>
+  <br><br>
+  <input type="submit" value="Submit">
+  </form>
+
 
 
 <%
@@ -14,6 +40,7 @@ else
   @cute = 'https://i.redd.it/48sohrjn8mf41.jpg'
 end
 %>
-  
+
+
 <img src= <%= @cute %> alt='cat with hat and tongue sticking out' 
 height=400px width=auto style='border: dashed <%= @colour %>;'>
