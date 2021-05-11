@@ -23,7 +23,15 @@ get '/recipe' do
   </ul>"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Adam", "Emily", "Matt"].sample
   erb(:index) # can be named anything
+end
+
+get '/named-cat' do
+  p params
+  @colour = params[:colour]
+  @name = params[:name]
+  @cute = params[:cute]
+  erb(:index)
 end
