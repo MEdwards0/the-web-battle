@@ -1,14 +1,13 @@
 <% if @name%>
-  <%if @name == '' %>
+  <% if @name == '' %>
   <% else %>
     <h1>My name is <%= @name %></h1>
   <% end %>
-
 <% end %>
 
 <h1>Cats are cool</h1>
 
-<form action="/named-cat">
+<%# <form action="/named-cat">
   <label>Set New Name:</label>
   <input type="text" name="name">
   <br>
@@ -25,12 +24,9 @@
   <input id='false' type='checkbox' name='cute' value='false'>
   <br><br>
   <input type="submit" value="Submit">
-  </form>
+</form> %>
 
-
-
-<%
-if @colour == nil
+<% if @colour == nil
   @colour = 'red'
 end
 
@@ -38,9 +34,7 @@ if @cute == 'false'
   @cute = 'https://external-preview.redd.it/pTfu1ImYPZW9MmI4AMaPgl2NJDx7mqyQR0vkKoA67Dg.jpg?auto=webp&s=26be07b42788b6992c6c7ecc698ef1012dab9803'
 else
   @cute = 'https://i.redd.it/48sohrjn8mf41.jpg'
-end
-%>
-
+end %>
 
 <img src= <%= @cute %> alt='cat with hat and tongue sticking out' 
 height=400px width=auto style='border: dashed <%= @colour %>;'>
