@@ -1,4 +1,4 @@
-<% if @name%>
+<% if @name %>
   <% if @name == '' %>
   <% else %>
     <h1>My name is <%= @name %></h1>
@@ -39,6 +39,7 @@ end %>
 <img src= <%= @cute %> alt='cat with hat and tongue sticking out' 
 height=400px width=auto style='border: dashed <%= @colour %>;'>
 
-<div class='back-button'>
-<a href='/cat-form'><img src='https://www.nicepng.com/png/full/50-508180_clip-back-button-png-cartoon.png' width=150px height=auto></a>
+<div class='buttons'>
+  <a href='/cat-form'><img src='https://www.nicepng.com/png/full/50-508180_clip-back-button-png-cartoon.png' width=150px height=auto></a>
+  <a href='/'><img src='https://cdn.pixabay.com/photo/2013/07/13/10/24/glossy-157164_640.png' height=100px width=auto></a>
 </div>

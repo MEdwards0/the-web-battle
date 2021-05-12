@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 
 get '/' do
-  'good morning/afternoon/evening'
+  erb :home
 end
 
 get '/secret' do
