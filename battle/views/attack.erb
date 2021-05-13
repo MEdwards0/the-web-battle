@@ -1,5 +1,17 @@
+<%if @game.current_turn == @game.player_1%>
+
+
 <%= @game.player_1.name %> attacked <%= @game.player_2.name %>!
 <br>
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
 <br>
-<a href='/play'>Ok</a>
+
+<%else%>
+
+<%= @game.player_2.name %> attacked <%= @game.player_1.name %>!
+<br>
+<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
+<br>
+
+<%end%>
+<a href='/switch-turns'>Ok</a>
